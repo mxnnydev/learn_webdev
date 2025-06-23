@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Sets the viewport for responsive design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lesson on Div vs Span (Block vs Inline Elements)</title>
+  </head>
+  <body>
+    <!-- Use <div> as a generic block-level container when no semantic element fits -->
+    <!-- Commonly used to group multiple elements or apply layout styling -->
+    <div>
+      <!-- This is an empty <div>; typically used to wrap other nested elements -->
+    </div>
+
+    <!-- <span> is an inline element used for styling small portions of text -->
+    <span>Text</span>
+
+    <!-- <span> is often placed inside headings or paragraphs to style specific words -->
+    <h1>
+      Hello Good Morning, my favorite color is
+      <!-- Here we style only the word "red" using an inline <span> element -->
+      <span style="color: lightcoral">red</span>
+    </h1>
+
+    <!-- 
+      Key difference between block and inline elements:
+      - Block elements (like <div>) take up the full width of the parent container
+      - Inline elements (like <span>) only take up as much width as their content
+      There is also a hybrid: 'inline-block', which behaves like inline but respects width, height, padding, and margins like block
+      Using CSS, we can change the display behavior of any element (e.g., from inline to block and vice versa)
+    -->
+  </body>
+</html>
