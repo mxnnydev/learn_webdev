@@ -3,65 +3,60 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Forms in HTMl</title>
+    <title>Forms in HTML</title>
   </head>
   <body>
-    <h1>Lesson on Forms in HTML</h1>
-    <p>
-      we will now be learning how forms work in HTML to help with data collect
-      and various type of way to collect data in HTML
-    </p>
-    <!-- every form section will start with the root elements which is the form element -->
-    <!-- what action attributes does is the following: where to move the data to -->
-    <!-- then we have two main method in form which is : get ~ for gettinng/searching , post ~ is for like personal credentials like login info in a secure method-->
-    <form action="#" method="post">
-      <!-- label is used to connect input to label but mainly to direct the user to what infomation the input is suggesting to get inpute into -->
-      <label for="name">Name: </label>
-      <!-- when you want to connect label & input ensure that id & for will equal to the same value -->
-      <input type="text" id="name" name="name" />
-      <!-- you must be asking what does name do in the input as attribute so when your submitting inofmation like in a form when you submit something it will be sent as key:value pairs with this in mind name will be what the key will be call in server when it you submit your form and whatever that input is sent in the input will be the value. Thus you get have the key:value idea -->
-      <!-- when you want multi-line inputs you can use textarea ~ it best for like when you want a input at your creating something like feedback container  -->
-      <label for="feedback">Feedback:</label>
-      <textarea name="feedback" id="feedback"></textarea>
-      <!-- by default input will be of type="text" but we have also more common ones which is  select, radio, checkbox and much more-->
-      <label for="countries">Countries to travel</label>
-      <select name="countries" id="countries">
-        <option value="india">India</option>
-        <option value="china">China</option>
-        <option value="europe">Europe</option>
-      </select>
-      <!-- Radio Buttons -->
-      <label>Are you happy or sad?</label><br />
+    <h1>Lesson: Forms in HTML</h1>
 
-      <input type="radio" name="emotion" id="emotion-happy" value="happy" />
-      <label for="emotion-happy">Happy</label><br />
-
-      <input type="radio" name="emotion" id="emotion-sad" value="sad" />
-      <label for="emotion-sad">Sad</label>
-
-      <!-- here is example use of checkbox to better understand main difference between checkbox verse radio in radio only single selection in checkbox you can do multiple selection ~ -->
-      <h3>Select your favorite fruits:</h3>
-      <label>
-        <input type="checkbox" name="fruits" value="apple" />
-        Apple </label
-      ><br />
-
-      <label>
-        <input type="checkbox" name="fruits" value="banana" />
-        Banana </label
-      ><br />
-
-      <label>
-        <input type="checkbox" name="fruits" value="mango" />
-        Mango </label
-      ><br />
-
-      <!-- finally this is used to submit a form to server ~ where your action is set -->
-      <button type="submit">Submit</button>
-      <input type="submit" /s>
+    <!-- 
+      Forms in HTML are used to collect user input.
+      The <form> element wraps all input-related elements like text fields, checkboxes, radio buttons, etc.
+      When submitted, the form sends the data to a server using either GET or POST method.
+    -->
+    <form>
       <!-- 
-      <input type="submit" /s> ~ here is another way to do it
-       -->
+        The <label> element improves accessibility by linking text with its input field.
+        Use the 'for' attribute in <label> to associate it with an input's 'id'.
+      -->
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" /><br /><br />
+
+      <!-- 
+        Use 'type="password"' to mask the input for sensitive information like passwords.
+      -->
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" /><br /><br />
+
+      <!-- 
+        Checkboxes allow users to select one or more options.
+        Using the same 'name' groups the selected values under that key when submitted.
+      -->
+      <p>Select your favorite fruits:</p>
+      <label><input type="checkbox" name="fruits" value="apple" /> Apple</label
+      ><br />
+      <label
+        ><input type="checkbox" name="fruits" value="banana" /> Banana</label
+      ><br />
+      <label><input type="checkbox" name="fruits" value="mango" /> Mango</label
+      ><br /><br />
+
+      <!-- 
+        Radio buttons allow users to select only one option from a group.
+        All radio buttons in the same group must share the same 'name' value.
+      -->
+      <p>Select your gender:</p>
+      <label><input type="radio" name="gender" value="male" /> Male</label
+      ><br />
+      <label><input type="radio" name="gender" value="female" /> Female</label
+      ><br />
+      <label><input type="radio" name="gender" value="other" /> Other</label
+      ><br /><br />
+
+      <!-- 
+        The <button type="submit"> is used to submit the form data.
+        You can also use <input type="submit">, but <button> is more flexible for styling and content.
+      -->
+      <button type="submit">Submit</button>
     </form>
   </body>
 </html>
